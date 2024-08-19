@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Google Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+    </nav>
+    <div class="container">
+        <form id="reviewForm">
+            <h2>Leave a Review</h2>
+            <textarea id="reviewText" rows="5" placeholder="Write your review here..."></textarea>
+            <div class="rating">
+                <label for="ratingSlider">Rating:</label>
+                <input type="range" id="ratingSlider" min="1" max="5" step="1" value="3" oninput="updateRatingValue(this.value)">
+                <span id="ratingValue">3 ★★★☆☆</span>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="submitReview()">Submit Review</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
